@@ -6,10 +6,11 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
+    "bcryptjs": "^2.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.15",
     "morgan": "~1.9.0"
   }

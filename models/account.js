@@ -3,13 +3,14 @@ var mongoose = require('mongoose');
 
 // define the schema for our model
 var addressSchema = mongoose.Schema({
-  address_type: Number,
-  address: String
+  address_type: {type: Number, required: true, unique: true},
+  address: {type: String, required: true}
 });
 
 // define the schema for our model
 var accountSchema = mongoose.Schema({
-  address: String,
+  alias: {type: String, required: true},
+  password: {type: String, required: true},
   addresses: [addressSchema]
 });
 

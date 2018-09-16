@@ -1,10 +1,9 @@
 var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var config = require('./config');
 
-mongoose.connect('mongodb://localhost:27017/opencap-server', { useNewUrlParser: true });
+mongoose.connect(config.mongodb_conn, { useNewUrlParser: true });
 
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
